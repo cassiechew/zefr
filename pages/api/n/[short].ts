@@ -11,7 +11,7 @@ type Data = {
 
 const addhttp = (url : string) => {
   if (!/^(?:f|ht)tps?\:\/\//.test(url)) {
-      url = "http://" + url;
+      url = "https://" + url;
   }
   return url;
 }
