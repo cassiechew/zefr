@@ -24,19 +24,16 @@ export default async function handler(
   if (req.method === 'OPTIONS') {
     return res.status(200).json({name: ''});
   }
-  if (req.method === 'GET') {
     
-    const { code } = req.query
+  const { code } = req.query
 
-    const urlq = await db.Url.findOne({short: `${code}`}).exec()
-    console.log("Q: " + JSON.stringify(req.query))
-    console.log("C: " + (`${code}`))
-    console.log("U: " +urlq)
-    res.writeHead(307, {
-      Location: "https://google.com",
-    })
-    return res.end()
-  }
-  
-  res.status(404)
+  const urlq = await db.Url.findOne({short: `${code}`}).exec()
+  console.log("Q: " + JSON.stringify(req.query))
+  console.log("C: " + (`${code}`))
+  console.log("U: " +urlq)
+  res.writeHead(307, {
+    Location: "https://google.com",
+  })
+  return res.end()
+
 }
