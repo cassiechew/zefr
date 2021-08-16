@@ -9,7 +9,7 @@ const ToRedirect: NextPage = () => {
 		if(!router.isReady) return;
 		const { url } = router.query;
 
-		fetch('/api/' + url)
+		fetch('/api/' + url, { method: 'GET', redirect: 'follow'})
 	});
 	return(<div></div>);
 };
