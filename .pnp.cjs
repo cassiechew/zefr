@@ -45,6 +45,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-config-next", "virtual:ddccc941eb8b35cd4b898a64351d8bba4ecc85eb47e8f1b36dce7852d6c3635665e0fc5464861f723d175edb2248ce0fa54dfefb9b5e4d2fdaef4b2353c4aa82#npm:11.1.0"],
             ["mongoose", "npm:5.13.7"],
             ["next", "virtual:ddccc941eb8b35cd4b898a64351d8bba4ecc85eb47e8f1b36dce7852d6c3635665e0fc5464861f723d175edb2248ce0fa54dfefb9b5e4d2fdaef4b2353c4aa82#npm:11.1.0"],
+            ["nextjs-cors", "virtual:ddccc941eb8b35cd4b898a64351d8bba4ecc85eb47e8f1b36dce7852d6c3635665e0fc5464861f723d175edb2248ce0fa54dfefb9b5e4d2fdaef4b2353c4aa82#npm:1.0.5"],
             ["postcss", "npm:8.3.6"],
             ["postcss-cli", "virtual:ddccc941eb8b35cd4b898a64351d8bba4ecc85eb47e8f1b36dce7852d6c3635665e0fc5464861f723d175edb2248ce0fa54dfefb9b5e4d2fdaef4b2353c4aa82#npm:8.3.1"],
             ["prettier", "npm:2.3.2"],
@@ -4258,6 +4259,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-config-next", "virtual:ddccc941eb8b35cd4b898a64351d8bba4ecc85eb47e8f1b36dce7852d6c3635665e0fc5464861f723d175edb2248ce0fa54dfefb9b5e4d2fdaef4b2353c4aa82#npm:11.1.0"],
             ["mongoose", "npm:5.13.7"],
             ["next", "virtual:ddccc941eb8b35cd4b898a64351d8bba4ecc85eb47e8f1b36dce7852d6c3635665e0fc5464861f723d175edb2248ce0fa54dfefb9b5e4d2fdaef4b2353c4aa82#npm:11.1.0"],
+            ["nextjs-cors", "virtual:ddccc941eb8b35cd4b898a64351d8bba4ecc85eb47e8f1b36dce7852d6c3635665e0fc5464861f723d175edb2248ce0fa54dfefb9b5e4d2fdaef4b2353c4aa82#npm:1.0.5"],
             ["postcss", "npm:8.3.6"],
             ["postcss-cli", "virtual:ddccc941eb8b35cd4b898a64351d8bba4ecc85eb47e8f1b36dce7852d6c3635665e0fc5464861f723d175edb2248ce0fa54dfefb9b5e4d2fdaef4b2353c4aa82#npm:8.3.1"],
             ["prettier", "npm:2.3.2"],
@@ -4382,6 +4384,29 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "react-dom",
             "react",
             "sass"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["nextjs-cors", [
+        ["npm:1.0.5", {
+          "packageLocation": "./.yarn/cache/nextjs-cors-npm-1.0.5-bcfcaf7914-4dda46e203.zip/node_modules/nextjs-cors/",
+          "packageDependencies": [
+            ["nextjs-cors", "npm:1.0.5"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:ddccc941eb8b35cd4b898a64351d8bba4ecc85eb47e8f1b36dce7852d6c3635665e0fc5464861f723d175edb2248ce0fa54dfefb9b5e4d2fdaef4b2353c4aa82#npm:1.0.5", {
+          "packageLocation": "./.yarn/__virtual__/nextjs-cors-virtual-b220d09f84/0/cache/nextjs-cors-npm-1.0.5-bcfcaf7914-4dda46e203.zip/node_modules/nextjs-cors/",
+          "packageDependencies": [
+            ["nextjs-cors", "virtual:ddccc941eb8b35cd4b898a64351d8bba4ecc85eb47e8f1b36dce7852d6c3635665e0fc5464861f723d175edb2248ce0fa54dfefb9b5e4d2fdaef4b2353c4aa82#npm:1.0.5"],
+            ["@types/next", null],
+            ["cors", "npm:2.8.5"],
+            ["next", "virtual:ddccc941eb8b35cd4b898a64351d8bba4ecc85eb47e8f1b36dce7852d6c3635665e0fc5464861f723d175edb2248ce0fa54dfefb9b5e4d2fdaef4b2353c4aa82#npm:11.1.0"]
+          ],
+          "packagePeers": [
+            "@types/next",
+            "next"
           ],
           "linkType": "HARD",
         }]

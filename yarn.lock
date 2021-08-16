@@ -3562,6 +3562,7 @@ __metadata:
     eslint-config-next: 11.1.0
     mongoose: ^5.13.7
     next: 11.1.0
+    nextjs-cors: ^1.0.5
     postcss: latest
     postcss-cli: ^8.3.1
     prettier: 2.3.2
@@ -3668,6 +3669,17 @@ __metadata:
   bin:
     next: dist/bin/next
   checksum: b74dfd738b12917ba946b81678da330e9795c5ecf08761a984d8d5b780b983ce9671c093b59c70070ad9dbdc6ef1e55280d57599d27e1f1f9dc666111ad60e5e
+  languageName: node
+  linkType: hard
+
+"nextjs-cors@npm:^1.0.5":
+  version: 1.0.5
+  resolution: "nextjs-cors@npm:1.0.5"
+  dependencies:
+    cors: ^2.8.5
+  peerDependencies:
+    next: ^8.1.1-canary.54 || ^9.0.0 || ^10.0.0
+  checksum: 4dda46e20328307ab441beec7abd812ccf4316739c5605a725cd7c259ccbe1ec03fbc7f60af2ca1818e389908c95145f98562a48cb7c8b4cd7805c5ec2466227
   languageName: node
   linkType: hard
 
