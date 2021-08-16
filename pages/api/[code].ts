@@ -28,10 +28,8 @@ export default async function handler(
   const { code } = req.query
 
   const urlq = await Url.findOne({short: `${code}`}).exec()
-  console.log("Q: " + JSON.stringify(req.query))
-  console.log("C: " + (`${code}`))
-  console.log("U: " +urlq)
-  res.writeHead(301, {
+  // console.log("U: " + urlq.long)
+  res.writeHead(302, {
     Location: urlq.long,
   })
   return res.end()
