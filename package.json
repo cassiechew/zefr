@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build:css": "postcss styles/tailwind.css -o styles/main.css",
+    "build:watch": "postcss styles/tailwind.css -o styles/main.css --watch"
   },
   "dependencies": {
     "next": "11.1.0",
@@ -15,10 +17,14 @@
   },
   "devDependencies": {
     "@types/node": "^16.6.1",
-    "@types/react": "17.0.17",
+    "@types/react": "^17.0.18",
+    "autoprefixer": "latest",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.0",
+    "postcss": "latest",
+    "postcss-cli": "^8.3.1",
     "prettier": "2.3.2",
+    "tailwindcss": "latest",
     "typescript": "4.3.5"
   },
   "packageManager": "yarn@3.0.1-rc.2"
