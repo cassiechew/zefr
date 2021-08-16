@@ -3,31 +3,28 @@ import { useState } from 'react'
 import { useInput } from '../hooks/inputHook'
 import Head from 'next/head'
 
+
+
 const Home: NextPage = () => {
   const { value, bind, reset } = useInput('')
-  const { result, setResult } = useState(0)
-  
-  const re = /[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/
+  const [ result, setResult ] = useState('')
 
-  let url : string = ""
+  const re = /[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/
 
   const handleSubmit = async (e : any) => {
     e.preventDefault();
     if (!re.test(value)) {
       alert("This is not a valid website!")
     } else {
-      const res = await fetch('/api/n/'+value)
+      
+      const res = await fetch('/api/n/' + value)
       .then(res => {
         return res.json()
       })
-      console.log(res.new)
-      url = res.new
+      setResult(res.new)
       reset();
     }
   }
-
-  const handleReveal = () => setResult(url)
-
 
   return (
     <div className="flex flex-col w-screen justify-center align-center items-center bg-gray-900 text-gray-300">
@@ -41,20 +38,19 @@ const Home: NextPage = () => {
         <div className="flex flex-col container justify-center min-h-screen align-center items-center" >
           <form className="flex flex-col container justify-center align-center items-center" onSubmit={handleSubmit}>
             <label>Url to shorten</label>
-            <input className="border-b-2 border-solid bg-gray-900 text-gray-300 max-w-md" type="text" {...bind} />
+            <input className="border-b-2 border-solid bg-gray-900 text-gray-300 max-w-md text-center" type="text" {...bind} />
             <br />
             <button className="border-solid border-2 p-1" type="submit">Shorten</button>
           </form>
           <br />
-          <button className="border-solid border-2 p-1" type="submit" onClick={handleReveal}>Show Short</button>
-          <br />
-          <div>{result}</div>
+          <div>
+            <p className="text-gray-300">{'> ' + result + ' <'}</p>
+          </div>
+          <footer>
+            Made by <a href="http://cassie.id">Cassie C</a>
+          </footer>
         </div>
       </main>
-
-      <footer>
-        
-      </footer>
     </div>
   )
 }
