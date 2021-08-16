@@ -6,6 +6,7 @@ import Head from 'next/head'
 const Home: NextPage = () => {
   const { value, bind, reset } = useInput('')
   const { result, setResult } = useState(0)
+  
   const re = /[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/
 
   let url : string = ""
