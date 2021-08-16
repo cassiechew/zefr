@@ -3,7 +3,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 
 import db from '../../db/db'
 
-import NextCors from 'cors'
+import NextCors from 'nextjs-cors'
 
 type Data = {
   name: string
