@@ -1,12 +1,15 @@
-import mongoose, { Model } from 'mongoose';
+import mongoose from 'mongoose';
 const {Schema} = mongoose;
-let Url : any = null;
+
+const urlSchema = new Schema({
+    short: String,
+    long: String,
+});
 
 const host : string = process.env.DB_HOST ?? ""
 
 mongoose.connect(host, {useNewUrlParser: true, useUnifiedTopology: true});
 
-Url = mongoose.model('Url', new Schema({ short: String, long: String }));
+const Url = mongoose.model('url', urlSchema);
 
-
-export default {mongoose, Url}
+export default Url

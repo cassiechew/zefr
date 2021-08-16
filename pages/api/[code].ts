@@ -1,7 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
 
-import db from '../../db/db'
+import Url from '../../db/db'
 
 import NextCors from 'nextjs-cors'
 
@@ -22,17 +22,17 @@ export default async function handler(
   });
   
   if (req.method === 'OPTIONS') {
-    return res.status(200).json({name: ''});
+    return res.status(200).end();
   }
     
   const { code } = req.query
 
-  const urlq = await db.Url.findOne({short: `${code}`}).exec()
+  const urlq = await Url.findOne({short: `${code}`}).exec()
   console.log("Q: " + JSON.stringify(req.query))
   console.log("C: " + (`${code}`))
   console.log("U: " +urlq)
-  res.writeHead(307, {
-    Location: "https://google.com",
+  res.writeHead(301, {
+    Location: urlq.long,
   })
   return res.end()
 

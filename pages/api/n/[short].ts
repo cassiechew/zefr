@@ -1,7 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
 
-import db from '../../../db/db';
+import Url from '../../../db/db';
 
 const base = "https://zefr.xyz/"
 
@@ -32,7 +32,7 @@ export default function handler(
     }
 
     console.log(httpUrl)
-    const newUrl = new db.Url({ short: rand, long: httpUrl });
+    const newUrl = new Url({ short: rand, long: httpUrl });
     
 
     newUrl.save().then(() => console.log("Inserted: " + newUrl.toString()));
