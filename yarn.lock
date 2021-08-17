@@ -1171,6 +1171,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"clipboard@npm:^2.0.6":
+  version: 2.0.8
+  resolution: "clipboard@npm:2.0.8"
+  dependencies:
+    good-listener: ^1.2.2
+    select: ^1.1.2
+    tiny-emitter: ^2.0.0
+  checksum: 13bda94d102cbab9f214c546358a27405f79bcaa58b1bd364f1ef9b9b44e2b3a2b0345bbaad5ce72b24fe89e9b0e6d8aaec0a59157721c47143010238e815a24
+  languageName: node
+  linkType: hard
+
 "cliui@npm:^7.0.2":
   version: 7.0.4
   resolution: "cliui@npm:7.0.4"
@@ -1538,6 +1549,13 @@ __metadata:
   version: 1.0.0
   resolution: "defined@npm:1.0.0"
   checksum: 77672997c5001773371c4dbcce98da0b3dc43089d6da2ad87c4b800adb727633cea8723ea3889fe0c2112a2404e2fd07e3bfd0e55f7426aa6441d8992045dbd5
+  languageName: node
+  linkType: hard
+
+"delegate@npm:^3.1.2":
+  version: 3.2.0
+  resolution: "delegate@npm:3.2.0"
+  checksum: d943058fe05897228b158cbd1bab05164df28c8f54127873231d6b03b0a5acc1b3ee1f98ac70ccc9b79cd84aa47118a7de111fee2923753491583905069da27d
   languageName: node
   linkType: hard
 
@@ -2413,6 +2431,15 @@ __metadata:
     merge2: ^1.3.0
     slash: ^3.0.0
   checksum: d3e02d5e459e02ffa578b45f040381c33e3c0538ed99b958f0809230c423337999867d7b0dbf752ce93c46157d3bbf154d3fff988a93ccaeb627df8e1841775b
+  languageName: node
+  linkType: hard
+
+"good-listener@npm:^1.2.2":
+  version: 1.2.2
+  resolution: "good-listener@npm:1.2.2"
+  dependencies:
+    delegate: ^3.1.2
+  checksum: f39fb82c4e41524f56104cfd2d7aef1a88e72f3f75139115fbdf98cc7d844e0c1b39218b2e83438c6188727bf904ed78c7f0f2feff67b32833bc3af7f0202b33
   languageName: node
   linkType: hard
 
@@ -3566,7 +3593,9 @@ __metadata:
     postcss: latest
     postcss-cli: ^8.3.1
     prettier: 2.3.2
+    prop-types: ^15.7.2
     react: 17.0.2
+    react-clipboardjs-copy: ^1.3.2
     react-dom: 17.0.2
     tailwindcss: latest
     typescript: 4.3.5
@@ -4531,6 +4560,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-clipboardjs-copy@npm:^1.3.2":
+  version: 1.3.2
+  resolution: "react-clipboardjs-copy@npm:1.3.2"
+  dependencies:
+    clipboard: ^2.0.6
+  checksum: dbd55f5e21eb21279f9fe95a6f47e15d6d1d332eb86ca9b8eaf5ebe428896fac226f9196b7196eec1817b7125ce830d645ddc53210e161c7431538f2d4a6f36a
+  languageName: node
+  linkType: hard
+
 "react-dom@npm:17.0.2":
   version: 17.0.2
   resolution: "react-dom@npm:17.0.2"
@@ -4860,6 +4898,13 @@ resolve@^2.0.0-next.3:
     loose-envify: ^1.1.0
     object-assign: ^4.1.1
   checksum: c4b35cf967c8f0d3e65753252d0f260271f81a81e427241295c5a7b783abf4ea9e905f22f815ab66676f5313be0a25f47be582254db8f9241b259213e999b8fc
+  languageName: node
+  linkType: hard
+
+"select@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "select@npm:1.1.2"
+  checksum: 4346151e94f226ea6131e44e68e6d837f3fdee64831b756dd657cc0b02f4cb5107f867cb34a1d1216ab7737d0bf0645d44546afb030bbd8d64e891f5e4c4814e
   languageName: node
   linkType: hard
 
@@ -5475,6 +5520,13 @@ resolve@^2.0.0-next.3:
   dependencies:
     setimmediate: ^1.0.4
   checksum: ec37ae299066bef6c464dcac29c7adafba1999e7227a9bdc4e105a459bee0f0b27234a46bfd7ab4041da79619e06a58433472867a913d01c26f8a203f87cee70
+  languageName: node
+  linkType: hard
+
+"tiny-emitter@npm:^2.0.0":
+  version: 2.1.0
+  resolution: "tiny-emitter@npm:2.1.0"
+  checksum: fbcfb5145751a0e3b109507a828eb6d6d4501352ab7bb33eccef46e22e9d9ad3953158870a6966a59e57ab7c3f9cfac7cab8521db4de6a5e757012f4677df2dd
   languageName: node
   linkType: hard
 

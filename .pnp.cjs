@@ -49,7 +49,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["postcss", "npm:8.3.6"],
             ["postcss-cli", "virtual:ddccc941eb8b35cd4b898a64351d8bba4ecc85eb47e8f1b36dce7852d6c3635665e0fc5464861f723d175edb2248ce0fa54dfefb9b5e4d2fdaef4b2353c4aa82#npm:8.3.1"],
             ["prettier", "npm:2.3.2"],
+            ["prop-types", "npm:15.7.2"],
             ["react", "npm:17.0.2"],
+            ["react-clipboardjs-copy", "npm:1.3.2"],
             ["react-dom", "virtual:ddccc941eb8b35cd4b898a64351d8bba4ecc85eb47e8f1b36dce7852d6c3635665e0fc5464861f723d175edb2248ce0fa54dfefb9b5e4d2fdaef4b2353c4aa82#npm:17.0.2"],
             ["tailwindcss", "virtual:ddccc941eb8b35cd4b898a64351d8bba4ecc85eb47e8f1b36dce7852d6c3635665e0fc5464861f723d175edb2248ce0fa54dfefb9b5e4d2fdaef4b2353c4aa82#npm:2.2.7"],
             ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
@@ -1434,6 +1436,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["clipboard", [
+        ["npm:2.0.8", {
+          "packageLocation": "./.yarn/cache/clipboard-npm-2.0.8-00bb557e08-13bda94d10.zip/node_modules/clipboard/",
+          "packageDependencies": [
+            ["clipboard", "npm:2.0.8"],
+            ["good-listener", "npm:1.2.2"],
+            ["select", "npm:1.1.2"],
+            ["tiny-emitter", "npm:2.1.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["cliui", [
         ["npm:7.0.4", {
           "packageLocation": "./.yarn/cache/cliui-npm-7.0.4-d6b8a9edb6-ce2e8f578a.zip/node_modules/cliui/",
@@ -1910,6 +1924,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/defined-npm-1.0.0-891782ba77-77672997c5.zip/node_modules/defined/",
           "packageDependencies": [
             ["defined", "npm:1.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["delegate", [
+        ["npm:3.2.0", {
+          "packageLocation": "./.yarn/cache/delegate-npm-3.2.0-d3f849ea99-d943058fe0.zip/node_modules/delegate/",
+          "packageDependencies": [
+            ["delegate", "npm:3.2.0"]
           ],
           "linkType": "HARD",
         }]
@@ -2947,6 +2970,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ignore", "npm:5.1.8"],
             ["merge2", "npm:1.4.1"],
             ["slash", "npm:3.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["good-listener", [
+        ["npm:1.2.2", {
+          "packageLocation": "./.yarn/cache/good-listener-npm-1.2.2-e7865da849-f39fb82c4e.zip/node_modules/good-listener/",
+          "packageDependencies": [
+            ["good-listener", "npm:1.2.2"],
+            ["delegate", "npm:3.2.0"]
           ],
           "linkType": "HARD",
         }]
@@ -4262,7 +4295,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["postcss", "npm:8.3.6"],
             ["postcss-cli", "virtual:ddccc941eb8b35cd4b898a64351d8bba4ecc85eb47e8f1b36dce7852d6c3635665e0fc5464861f723d175edb2248ce0fa54dfefb9b5e4d2fdaef4b2353c4aa82#npm:8.3.1"],
             ["prettier", "npm:2.3.2"],
+            ["prop-types", "npm:15.7.2"],
             ["react", "npm:17.0.2"],
+            ["react-clipboardjs-copy", "npm:1.3.2"],
             ["react-dom", "virtual:ddccc941eb8b35cd4b898a64351d8bba4ecc85eb47e8f1b36dce7852d6c3635665e0fc5464861f723d175edb2248ce0fa54dfefb9b5e4d2fdaef4b2353c4aa82#npm:17.0.2"],
             ["tailwindcss", "virtual:ddccc941eb8b35cd4b898a64351d8bba4ecc85eb47e8f1b36dce7852d6c3635665e0fc5464861f723d175edb2248ce0fa54dfefb9b5e4d2fdaef4b2353c4aa82#npm:2.2.7"],
             ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"]
@@ -5412,6 +5447,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["react-clipboardjs-copy", [
+        ["npm:1.3.2", {
+          "packageLocation": "./.yarn/cache/react-clipboardjs-copy-npm-1.3.2-ce6bad6330-dbd55f5e21.zip/node_modules/react-clipboardjs-copy/",
+          "packageDependencies": [
+            ["react-clipboardjs-copy", "npm:1.3.2"],
+            ["clipboard", "npm:2.0.8"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["react-dom", [
         ["npm:17.0.2", {
           "packageLocation": "./.yarn/cache/react-dom-npm-17.0.2-f551215af1-1c1eaa3bca.zip/node_modules/react-dom/",
@@ -5756,6 +5801,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["scheduler", "npm:0.20.2"],
             ["loose-envify", "npm:1.4.0"],
             ["object-assign", "npm:4.1.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["select", [
+        ["npm:1.1.2", {
+          "packageLocation": "./.yarn/cache/select-npm-1.1.2-13cd366fa2-4346151e94.zip/node_modules/select/",
+          "packageDependencies": [
+            ["select", "npm:1.1.2"]
           ],
           "linkType": "HARD",
         }]
@@ -6458,6 +6512,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["timers-browserify", "npm:2.0.12"],
             ["setimmediate", "npm:1.0.5"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["tiny-emitter", [
+        ["npm:2.1.0", {
+          "packageLocation": "./.yarn/cache/tiny-emitter-npm-2.1.0-2a4d94f487-fbcfb51457.zip/node_modules/tiny-emitter/",
+          "packageDependencies": [
+            ["tiny-emitter", "npm:2.1.0"]
           ],
           "linkType": "HARD",
         }]

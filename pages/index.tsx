@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import { useState } from 'react'
 import { useInput } from '../hooks/inputHook'
 import Head from 'next/head'
+import ReactClipboard from 'react-clipboardjs-copy'
 
 /**
  * The home page for users to generate the shortened url
@@ -10,6 +11,7 @@ import Head from 'next/head'
 const Home: NextPage = () => {
   const { value, bind, reset } = useInput('')
   const [ result, setResult ] = useState('')
+  const [ isCopied, setIsCopied ] = useState('')
 
   /**
    * The regex for website checking
@@ -18,6 +20,7 @@ const Home: NextPage = () => {
 
   const handleSubmit = async (e : any) => {
     e.preventDefault();
+    
     if (!re.test(value)) {
       alert("This is not a valid website!")
     } else {
@@ -53,10 +56,18 @@ const Home: NextPage = () => {
           </form>
           <br />
           <div>
-            <p className="text-gray-300">{'> ' + result + ' <'}</p>
+            <ReactClipboard 
+              className="text-gray-300" 
+              text={result} 
+              onSuccess={() => setIsCopied("Copied!")}
+              ><button className="border-0 p-0 m-0"> {'> ' + result + ' <'}</button></ReactClipboard>
           </div>
-          <footer>
+          <br />
+          <p>{isCopied}</p>
+          <br />
+          <footer className="flex flex-col container justify-center align-center items-center">
             Made by <a href="http://cassie.id">Cassie C</a>
+            <a href="https://github.com/ryanchew3" ><img className="pt-3" src="/github.png" height="24" width="24" /></a>
           </footer>
         </div>
       </main>
