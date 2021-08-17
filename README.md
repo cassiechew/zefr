@@ -7,4 +7,4 @@ Zefr is a minimal looking url shorterner.
 
 
 
-[Zefr](https://zefr.xyz)
+[Zefr](https://zefr.xyz){:target="_blank"}
