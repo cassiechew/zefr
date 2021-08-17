@@ -16,6 +16,18 @@ const addhttp = (url : string) => {
   return url;
 }
 
+const generate = async () : Promise<string> => {
+  const rand = Math.random().toString(16).substr(2, 8);
+
+  const ok = await Url.find({short: rand}).exec()
+
+  if (ok.length === 0) {
+    return rand
+  }
+
+  return generate()
+}
+
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
@@ -23,7 +35,7 @@ export default async function handler(
   if (req.method === 'GET') {
     
     const { short } = req.query
-    const rand = Math.random().toString(16).substr(2, 8);
+    const rand = await generate();
     let httpUrl : string = '';
     if (typeof short === 'string') {
       httpUrl = addhttp(short)
