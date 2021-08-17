@@ -10,6 +10,12 @@ const ToRedirect: NextPage = () => {
 		const { url } = router.query;
 
 		fetch('/api/' + url, { method: 'GET', redirect: 'follow'})
+		.then(res => {
+			return res.json();
+		})
+		.then(red => {
+			window.location.href = red.new;
+		})
 	});
 	return(<div></div>);
 };

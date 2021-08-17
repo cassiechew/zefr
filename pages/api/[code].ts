@@ -28,7 +28,7 @@ export default async function handler(
   const { code } = req.query
 
   const urlq = await Url.findOne({short: `${code}`}).exec()
-  // console.log("U: " + urlq.long)
+  console.log("Sending: " + urlq.long)
   res.writeHead(302, {
     Location: urlq.long,
   })

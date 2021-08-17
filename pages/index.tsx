@@ -16,7 +16,6 @@ const Home: NextPage = () => {
     if (!re.test(value)) {
       alert("This is not a valid website!")
     } else {
-      
       const res = await fetch('/api/n/' + value)
       .then(res => {
         return res.json()
