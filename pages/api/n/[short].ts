@@ -16,7 +16,7 @@ const addhttp = (url : string) => {
   return url;
 }
 
-export default function handler(
+export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
@@ -33,14 +33,12 @@ export default function handler(
 
     console.log(httpUrl)
     const newUrl = new Url({ short: rand, long: httpUrl });
-    
 
-    newUrl.save().then(() => console.log("Inserted: " + newUrl.toString()));
-
-    console.log(`${short}`)
+    await newUrl.save().then(() => console.log("Inserted: " + newUrl.toString()));
 
     res.status(200).json({ new: base + rand} )
+    return
   }
   
-  // res.status(200).json({ name: 'John Doe' })
+  res.status(404).json({ New: "failed" })
 }
