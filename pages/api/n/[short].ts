@@ -40,5 +40,5 @@ export default async function handler(
     return
   }
   
-  res.status(404).json({ New: "failed" })
+  res.status(404).json({ new: "failed" })
 }
