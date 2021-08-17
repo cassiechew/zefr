@@ -6,7 +6,7 @@ import Url from '../../db/db'
 import NextCors from 'nextjs-cors'
 
 type Data = {
-  name: string
+  new: string
 }
 
 export default async function handler(
