@@ -5,11 +5,12 @@ import Url from '../../../db/db';
 
 const base = "https://zefr.xyz/"
 
-type Data = {
-  new: string
-}
-
-const addhttp = (url : string) => {
+/**
+ * addhttp, the function to ensure entered urls have https:// or http://
+ * @param {string} url Url to check for http
+ * @returns {string} url that contains https:// or http://
+ */
+const addhttp = (url : string): string => {
   if (!/^(?:f|ht)tps?\:\/\//.test(url)) {
       url = "https://" + url;
   }
@@ -17,6 +18,10 @@ const addhttp = (url : string) => {
   return url;
 }
 
+/**
+ * generate, creates a random length-8 string for the new url to return
+ * @returns {Promise<string>} The randomly generated stringto append to the base
+ */
 const generate = async () : Promise<string> => {
   const rand = Math.random().toString(16).substr(2, 8);
   const ok = await Url.find({short: rand}).exec()
@@ -26,15 +31,17 @@ const generate = async () : Promise<string> => {
   return generate()
 }
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<Data>
-) {
+/**
+ * handler to create the shorter url
+ * @param {NextApiRequest} req 
+ * @param {NextApiResponse<Api.Data>} res 
+ */
+const handler: Api.ApiHandler = async (req: NextApiRequest, res: NextApiResponse<Api.Data>)  => {
   if (req.method === 'GET') {
 
     const { short } = req.query
+    let ext : string = ""
     let httpUrl : string = '';
-
     
     if (typeof short === 'string') {
       httpUrl = addhttp(short)
@@ -42,8 +49,12 @@ export default async function handler(
       httpUrl = addhttp(short[0])
     }
 
+    /**
+     * Checks for an existing entered long link from client and returns
+     * the existing shortened link if it exists. Otherwise it generates
+     * one
+     */
     const ex = await Url.find({long: httpUrl}).exec()
-    let ext : string = ""
     if (ex.length !== 0) {
       ext = ex[0].short
     } else {
@@ -59,3 +70,5 @@ export default async function handler(
   
   res.status(404).json({ new: "failed" })
 }
+
+export default handler

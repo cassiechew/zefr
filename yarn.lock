@@ -3570,7 +3570,6 @@ __metadata:
     react-dom: 17.0.2
     tailwindcss: latest
     typescript: 4.3.5
-    web-ping: ^1.0.0
   languageName: unknown
   linkType: soft
 
@@ -5788,13 +5787,6 @@ typescript@4.3.5:
     glob-to-regexp: ^0.4.1
     graceful-fs: ^4.1.2
   checksum: 4a2d7ed1b441814b232db9c065beaee40ad0e37f77279331d663fa950b6b1926210a8dfa6009dc806b248f15d48826c9c6ce1a7fd6e6c94178d13c6c0a33f32c
-  languageName: node
-  linkType: hard
-
-"web-ping@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "web-ping@npm:1.0.0"
-  checksum: 1a0c1b85963e9cf9273e5daf645ad750df2eca689519b8f3b441d3e2b2a90a798410734f7a2f67a6715343710d3dc02925910177c983c9885683da67c7b2f717
   languageName: node
   linkType: hard
 
