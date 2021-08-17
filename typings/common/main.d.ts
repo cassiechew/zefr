@@ -1,6 +1,6 @@
 // typings/common/main.d.ts
 
-export declare namespace Api {
+declare namespace Api {
     interface Data {
       new: string
     }
