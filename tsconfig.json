@@ -13,8 +13,9 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "baseUrl": "types",
     "typeRoots": [
-      "./typings"
+      "types"
     ]
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

@@ -1,8 +1,10 @@
 import type { NextPage } from 'next'
+import Image from 'next/image'
 import { useState } from 'react'
 import { useInput } from '../hooks/inputHook'
 import Head from 'next/head'
 import ReactClipboard from 'react-clipboardjs-copy'
+import 'react-clipboardjs-copy'
 
 /**
  * The home page for users to generate the shortened url
@@ -57,7 +59,6 @@ const Home: NextPage = () => {
           <br />
           <div>
             <ReactClipboard 
-              className="text-gray-300" 
               text={result} 
               onSuccess={() => setIsCopied("Copied!")}
               ><button className="border-0 p-0 m-0"> {'> ' + result + ' <'}</button></ReactClipboard>
@@ -67,7 +68,7 @@ const Home: NextPage = () => {
           <br />
           <footer className="flex flex-col container justify-center align-center items-center">
             Made by <a href="http://cassie.id">Cassie C</a>
-            <a href="https://github.com/ryanchew3" ><img className="pt-3" src="/github.png" height="24" width="24" /></a>
+            <a href="https://github.com/ryanchew3" ><Image className="pt-3" src="/github.png" alt="" height="24" width="24" /></a>
           </footer>
         </div>
       </main>
