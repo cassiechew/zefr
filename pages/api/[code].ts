@@ -29,9 +29,6 @@ export default async function handler(
 
   const urlq = await Url.findOne({short: `${code}`}).exec()
   console.log("Sending: " + urlq.long)
-  res.writeHead(302, {
-    Location: urlq.long,
-  })
-  return res.end()
+  res.send({ new: urlq.long})
 
 }
