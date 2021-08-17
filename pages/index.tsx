@@ -3,8 +3,6 @@ import { useState } from 'react'
 import { useInput } from '../hooks/inputHook'
 import Head from 'next/head'
 
-
-
 const Home: NextPage = () => {
   const { value, bind, reset } = useInput('')
   const [ result, setResult ] = useState('')
@@ -16,7 +14,9 @@ const Home: NextPage = () => {
     if (!re.test(value)) {
       alert("This is not a valid website!")
     } else {
-      const res = await fetch('/api/n/' + value)
+      let url : string = value.replace(/^(?:f|ht)tps?\:\/\//, "")
+      console.log(url)
+      const res = await fetch('/api/n/' + url)
       .then(res => {
         return res.json()
       })
