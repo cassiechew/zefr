@@ -1,6 +1,7 @@
 import mongoose from 'mongoose';
 const {Schema} = mongoose;
 
+
 const urlSchema = new Schema({
     short: String,
     long: String,

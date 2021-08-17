@@ -2,7 +2,12 @@ import type {NextPage} from 'next';
 import { useRouter } from 'next/router';
 import {useEffect} from 'react';
 
-const ToRedirect: NextPage = () => {
+/**
+ * ToRedirect is the page to redirect to the long url
+ * @component
+ * @returns null
+ */
+const ToRedirect: NextPage = (): null => {
 	const router = useRouter();
 
 	useEffect(() => {
@@ -17,7 +22,7 @@ const ToRedirect: NextPage = () => {
 			window.location.href = red.new;
 		})
 	});
-	return(<div></div>);
+	return null;
 };
 
 export default ToRedirect;
