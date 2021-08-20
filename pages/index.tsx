@@ -24,15 +24,15 @@ const Home: NextPage = () => {
     e.preventDefault();
     
     if (!re.test(value)) {
-      alert("This is not a valid website!")
     } else {
       
       /**
        * Removes the 'http://' or 'https://' for processing
        */
       let url : string = value.replace(/^(?:f|ht)tps?\:\/\//, "")
+      let uri : string = encodeURIComponent(url)
       console.log(url)
-      const res = await fetch('/api/n/' + url)
+      const res = await fetch('/api/n/' + uri)
       .then(res => {
         return res.json()
       })
