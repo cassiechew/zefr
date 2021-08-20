@@ -2,9 +2,11 @@ import type { NextPage } from 'next'
 import Image from 'next/image'
 import { useState } from 'react'
 import { useInput } from '../hooks/inputHook'
+import
 import Head from 'next/head'
 import ReactClipboard from 'react-clipboardjs-copy'
 import 'react-clipboardjs-copy'
+import { addhttp } from './api/n/[short]'
 
 /**
  * The home page for users to generate the shortened url
@@ -24,16 +26,16 @@ const Home: NextPage = () => {
     e.preventDefault();
     
     if (!re.test(value)) {
-      alert("This is not a valid website!")
     } else {
       
       /**
        * Removes the 'http://' or 'https://' for processing
        */
       let url : string = value.replace(/^(?:f|ht)tps?\:\/\//, "")
+      url = addhttp(url)
       let uri = new URL(url)
       console.log(url)
-      const res = await fetch('/api/n/' + uri)
+      const res = await fetch('/api/n/' + uri.toString)
       .then(res => {
         return res.json()
       })
