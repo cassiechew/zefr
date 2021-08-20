@@ -5,7 +5,19 @@ import { useInput } from '../hooks/inputHook'
 import Head from 'next/head'
 import ReactClipboard from 'react-clipboardjs-copy'
 import 'react-clipboardjs-copy'
-import { addhttp } from './api/n/[short]'
+
+/**
+ * addhttp, the function to ensure entered urls have https:// or http://
+ * @param {string} url Url to check for http
+ * @returns {string} url that contains https:// or http://
+ */
+ export const addhttp = (url : string): string => {
+  if (!/^(?:f|ht)tps?\:\/\//.test(url)) {
+      url = "https://" + url;
+  }
+  
+  return url;
+}
 
 /**
  * The home page for users to generate the shortened url

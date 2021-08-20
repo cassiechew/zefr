@@ -6,19 +6,6 @@ import Url from '../../../db/db';
 const base = "https://zefr.xyz/"
 
 /**
- * addhttp, the function to ensure entered urls have https:// or http://
- * @param {string} url Url to check for http
- * @returns {string} url that contains https:// or http://
- */
-export const addhttp = (url : string): string => {
-  if (!/^(?:f|ht)tps?\:\/\//.test(url)) {
-      url = "https://" + url;
-  }
-  
-  return url;
-}
-
-/**
  * generate, creates a random length-8 string for the new url to return
  * @returns {Promise<string>} The randomly generated stringto append to the base
  */
@@ -44,9 +31,9 @@ const handler: Api.ApiHandler = async (req: NextApiRequest, res: NextApiResponse
     let httpUrl : string = '';
     
     if (typeof short === 'string') {
-      httpUrl = addhttp(short)
+      httpUrl = short
     } else {
-      httpUrl = addhttp(short[0])
+      httpUrl = short[0]
     }
 
     /**
