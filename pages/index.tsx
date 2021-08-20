@@ -7,19 +7,6 @@ import ReactClipboard from 'react-clipboardjs-copy'
 import 'react-clipboardjs-copy'
 
 /**
- * addhttp, the function to ensure entered urls have https:// or http://
- * @param {string} url Url to check for http
- * @returns {string} url that contains https:// or http://
- */
- export const addhttp = (url : string): string => {
-  if (!/^(?:f|ht)tps?\:\/\//.test(url)) {
-      url = "https://" + url;
-  }
-  
-  return url;
-}
-
-/**
  * The home page for users to generate the shortened url
  * @returns {JSX.Element}
  */
@@ -43,8 +30,7 @@ const Home: NextPage = () => {
        * Removes the 'http://' or 'https://' for processing
        */
       let url : string = value.replace(/^(?:f|ht)tps?\:\/\//, "")
-      url = addhttp(url)
-      let uri = new URL(url)
+      let uri = encodeURIComponent(url)
       console.log(url)
       const res = await fetch('/api/n/' + uri.toString)
       .then(res => {
