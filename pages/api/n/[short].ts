@@ -10,7 +10,7 @@ const base = "https://zefr.xyz/"
  * @param {string} url Url to check for http
  * @returns {string} url that contains https:// or http://
  */
-export const addhttp = (url : string): string => {
+const addhttp = (url : string): string => {
   if (!/^(?:f|ht)tps?\:\/\//.test(url)) {
       url = "https://" + url;
   }
