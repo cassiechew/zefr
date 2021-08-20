@@ -2,7 +2,6 @@ import type { NextPage } from 'next'
 import Image from 'next/image'
 import { useState } from 'react'
 import { useInput } from '../hooks/inputHook'
-import
 import Head from 'next/head'
 import ReactClipboard from 'react-clipboardjs-copy'
 import 'react-clipboardjs-copy'
