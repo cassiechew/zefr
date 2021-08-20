@@ -31,8 +31,9 @@ const Home: NextPage = () => {
        * Removes the 'http://' or 'https://' for processing
        */
       let url : string = value.replace(/^(?:f|ht)tps?\:\/\//, "")
+      let uri = new URL(url)
       console.log(url)
-      const res = await fetch('/api/n/' + url)
+      const res = await fetch('/api/n/' + uri)
       .then(res => {
         return res.json()
       })
