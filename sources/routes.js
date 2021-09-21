@@ -1,6 +1,6 @@
-const express = require("express");
-const router = express.Router();
-const * = require("&Model");
+import { Router } from "express";
+const router = Router();
+import { * } from "&Model";
 
 
 router.get("/", async (req, res) => {
@@ -9,20 +9,18 @@ router.get("/", async (req, res) => {
 
 
 router.get("/:id", async (req, res) => {
-    
     try {
         const & = await *.findOne({
             %
         })
 
         res.send(&);
-
     }
     catch(ex){
         console.log(ex.errors);
         res.status(500).send(ex.message);
     }
- });
+});
 
 
 router.post("/c/", async (req, res) => {
