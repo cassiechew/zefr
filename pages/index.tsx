@@ -66,7 +66,7 @@ const Home: NextPage = () => {
           <br />
           <p>{isCopied}</p>
           <br />
-          <footer className="flex flex-col container justify-center align-center items-center">
+          <footer className="flex flex-col container justify-center align-center items-center fixed bottom-0">
             Made by <a href="http://cassie.id">Cassie C</a>
             <a href="https://github.com/ryanchew3" ><Image className="pt-3" src="/github.png" alt="" height="24" width="24" /></a>
           </footer>
